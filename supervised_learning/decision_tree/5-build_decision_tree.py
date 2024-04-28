@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-import numpy as np
 """decision tree"""
+import numpy as np
 
 
 class Node:
@@ -14,7 +14,6 @@ class Node:
             right_child=None,
             is_root=False,
             depth=0):
-        """initialize node"""
         self.feature = feature
         self.threshold = threshold
         self.left_child = left_child
@@ -159,7 +158,6 @@ class Leaf(Node):
     """Leaf class that inherits from Node class"""
 
     def __init__(self, value, depth=None):
-        """initialize leaf node"""
         super().__init__()
         self.value = value
         self.is_leaf = True
@@ -196,7 +194,6 @@ class Decision_Tree():
             seed=0,
             split_criterion="random",
             root=None):
-        """initialize decision tree"""
         self.rng = np.random.default_rng(seed)
         if root:
             self.root = root
