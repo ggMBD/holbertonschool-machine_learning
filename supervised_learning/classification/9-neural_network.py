@@ -22,3 +22,34 @@ class NeuralNetwork:
         self.__W2 = np.random.normal(size=(1, nodes))
         self.__b2 = 0
         self.__A2 = 0
+
+    @property
+    def W1(self):
+        """ Returns the values of the weights vector """
+        return self.__W1
+    
+    @property
+    def b1(self):
+        """ Returns the value of the bias neuron """
+        return self.__b1
+    
+    @property
+    def A1(self):
+        """ Returns the value of the activation function output """
+        return self.__A1
+    
+    @property
+    def W2(self):
+        """ Returns the values of the weights vector """
+        return self.__W2
+    
+    @property
+    def b2(self):
+        """ Returns the value of the bias neuron """
+        return self.__b2
+    
+    @property
+    def A2(self):
+        """ Returns the value of the activation function output """
+        return self.__A2
+    
