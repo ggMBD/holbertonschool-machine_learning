@@ -18,7 +18,7 @@ class DeepNeuralNetwork:
         self.cache = dict()
         self.weights = dict()
         for i in range(len(layers)):
-            if type(layers[i]) != int or layers[i] <= 0:
+            if (not isinstance(layers[i], int)) or layers[i] <= 0:
                 raise TypeError("layers must be a list of positive integers")
             if i == 0:
                 He = np.random.randn(layers[i], nx) * np.sqrt(2 / nx)
