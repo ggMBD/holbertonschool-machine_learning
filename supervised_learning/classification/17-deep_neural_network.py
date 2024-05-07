@@ -5,6 +5,7 @@ import numpy as np
 
 class DeepNeuralNetwork:
     """ deep neural network performing binary classification """
+
     def __init__(self, nx, layers):
         """ Class constructor """
         if not isinstance(nx, int):
@@ -28,3 +29,18 @@ class DeepNeuralNetwork:
                     layers[i], layers[i - 1]) * np.sqrt(2 / layers[i - 1])
                 self.__weights['W' + str(i + 1)] = He
             self.__weights['b' + str(i + 1)] = np.zeros((layers[i], 1))
+
+    @property
+    def L(self):
+        """ Return layers in the deep neural network """
+        return self.__L
+
+    @property
+    def cache(self):
+        """ Return the values stored in cache """
+        return self.__cache
+
+    @property
+    def weights(self):
+        """ Return the values stored in the weights dictionary """
+        return self.__weights
