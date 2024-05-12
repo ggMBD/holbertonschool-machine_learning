@@ -5,11 +5,14 @@ import tensorflow.compat.v1 as tf
 
 def calculate_loss(y, y_pred):
     """
-    Calculates the loss with respect to the final predicted labels of that step.
+    Calculates the loss with respect to the final predicted labels
+        of that step.
 
     Args:
-        y: The true labels, a tensor of shape (batch_size, num_classes).
-        y_pred: The predicted labels, a tensor of shape (batch_size, num_classes).
+        y: The true labels, a tensor of shape
+                (batch_size, num_classes).
+        y_pred: The predicted labels, a tensor of shape
+                (batch_size, num_classes).
 
     Returns:
         The calculated loss, a scalar tensor.
